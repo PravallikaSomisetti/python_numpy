@@ -1,0 +1,122 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOK9WbKwfKaWosWHcf4tnl/",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PravallikaSomisetti/python_numpy/blob/main/arrays\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6hWj6KOqKxin",
+        "outputId": "3b2a123b-fa78-4959-9136-e888942c4664"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Basic ndarray:\n",
+            " [1 2 3 4 5]\n",
+            "\n",
+            "Array of zeros:\n",
+            " [[0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0.]\n",
+            " [0. 0. 0. 0.]]\n",
+            "\n",
+            "Array of ones:\n",
+            " [[1. 1. 1.]\n",
+            " [1. 1. 1.]]\n",
+            "\n",
+            "Random numbers in ndarray:\n",
+            " [[0.07843158 0.28126164]\n",
+            " [0.84211865 0.02230844]]\n",
+            "\n",
+            "Random integers in ndarray:\n",
+            " [[6 6 3]\n",
+            " [9 9 3]\n",
+            " [6 4 8]]\n",
+            "\n",
+            "My custom array:\n",
+            " [[10 20 30]\n",
+            " [40 50 60]\n",
+            " [70 80 90]]\n",
+            "\n",
+            "Identity matrix:\n",
+            " [[1. 0. 0.]\n",
+            " [0. 1. 0.]\n",
+            " [0. 0. 1.]]\n",
+            "\n",
+            "Evenly spaced array (arange):\n",
+            " [0 2 4 6 8]\n",
+            "\n",
+            "Evenly spaced array (linspace):\n",
+            " [0.   0.25 0.5  0.75 1.  ]\n"
+          ]
+        }
+      ],
+      "source": [
+        "import numpy as np\n",
+        "\n",
+        "# a. Basic ndarray\n",
+        "basic_array = np.array([1, 2, 3, 4, 5])\n",
+        "print(\"Basic ndarray:\\n\", basic_array)\n",
+        "\n",
+        "# b. Array of zeros\n",
+        "zeros_array = np.zeros((3, 4))  # 3 rows, 4 columns\n",
+        "print(\"\\nArray of zeros:\\n\", zeros_array)\n",
+        "\n",
+        "# c. Array of ones\n",
+        "ones_array = np.ones((2, 3))  # 2 rows, 3 columns\n",
+        "print(\"\\nArray of ones:\\n\", ones_array)\n",
+        "\n",
+        "# d. Random numbers in ndarray\n",
+        "random_array = np.random.rand(2, 2)  # 2x2 array of random numbers between 0 and 1\n",
+        "print(\"\\nRandom numbers in ndarray:\\n\", random_array)\n",
+        "\n",
+        "random_integers = np.random.randint(1, 10, (3, 3)) #3x3 array of random integers between 1(inclusive) and 10(exclusive)\n",
+        "print(\"\\nRandom integers in ndarray:\\n\", random_integers)\n",
+        "\n",
+        "# e. An array of your choice\n",
+        "my_array = np.array([[10, 20, 30], [40, 50, 60], [70, 80, 90]])\n",
+        "print(\"\\nMy custom array:\\n\", my_array)\n",
+        "\n",
+        "# f. Identity matrix in NumPy (Imatrix)\n",
+        "identity_matrix = np.eye(3)  # 3x3 identity matrix\n",
+        "print(\"\\nIdentity matrix:\\n\", identity_matrix)\n",
+        "\n",
+        "# g. Evenly spaced ndarray\n",
+        "evenly_spaced_array1 = np.arange(0, 10, 2)  # Start, stop (exclusive), step\n",
+        "print(\"\\nEvenly spaced array (arange):\\n\", evenly_spaced_array1)\n",
+        "\n",
+        "evenly_spaced_array2 = np.linspace(0, 1, 5)  # Start, stop (inclusive), number of points\n",
+        "print(\"\\nEvenly spaced array (linspace):\\n\", evenly_spaced_array2)"
+      ]
+    }
+  ]
+}
